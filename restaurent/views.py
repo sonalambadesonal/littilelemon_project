@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import BookingForm
-from .models import Menu
+from .models import Menu,Booking
 # Create your views here.
 def home(request):
     return render(request, 'index.html')
@@ -32,4 +32,5 @@ def display_menu_item(request, pk=None):
         menu_item = ""
 
     return render(request, 'menu_item.html', {"menu_item" : menu_item})
+
     
